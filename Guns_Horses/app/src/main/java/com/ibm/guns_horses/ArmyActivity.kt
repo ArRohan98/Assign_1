@@ -4,6 +4,7 @@ package com.ibm.guns_horses
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.ArrayAdapter
@@ -33,7 +34,7 @@ class ArmyActivity : Activity() {
             listView.setAdapter(myAdapterInstance)
 
 
-            myStringArray.add("$value Guns")
+            myStringArray.add("$value Guns(Clickable!)")
             myStringArray.add("$value Horses")
 
 
@@ -42,25 +43,22 @@ class ArmyActivity : Activity() {
 
             listView.onItemClickListener = OnItemClickListener { parent, view, position, id ->
 
-                        val i = Intent(this, ArmyGuns::class.java)
-                        startActivity(i)
+                val i = Intent(this, ArmyGuns::class.java)
+                startActivityForResult(i, 1)
 
-                }
+            }
         }
 
     }
-//    fun onItemClick(
-//        l: AdapterView<*>?,
-//        v: View?,
-//        position: Int,
-//        id: Long
-//    ) {
-//        Log.i("HelloListView", "You clicked Item: $id at position:$position")
-//        // Then you start a new Activity via Intent
-//        val intent = Intent(this, ArmyGuns::class.java)
-//        intent.putExtra("position", position)
-//        // Or / And
-//        intent.putExtra("id", id)
-//        startActivity(intent)
-//    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 1) {
+
+            val extras = data?.extras
+            val value = extras?.getString("gun1")
+            Log.d("gun1", "$value")
+        }
+    }
 }

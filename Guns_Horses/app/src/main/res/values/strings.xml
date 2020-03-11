@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Contingents Specifications</string>
     <string name="armystr">ARMY</string>
+    <string name="ak47">Ak47</string>
+    <string name="sniper">Sniper</string>
+    <string name="pistol">Pistol</string>
 </resources>
