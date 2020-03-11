@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="350sp">
+
+
+        <ImageButton
+
+            android:id="@+id/Army"
+            android:layout_width="401dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tank"
+            android:text="@string/armystr"></ImageButton>
+
+        <TextView
+            android:id="@+id/ArmyT"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="280dp"
+            android:clickable="true"
+            android:paddingLeft="150sp"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp"
+            android:text="Army"
+            android:textSize="30sp"></TextView>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <ImageButton
+
+            android:id="@+id/navy2"
+            android:layout_width="480dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60sp"
+            android:paddingRight="70sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ship"
+            android:text="@string/armystr"></ImageButton>
+
+        <TextView
+            android:id="@+id/navy2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:clickable="true"
+            android:paddingLeft="150sp"
+            android:paddingTop="0dp"
+            android:paddingBottom="30sp"
+            android:text="Navy"
+            android:textSize="30sp"></TextView>
+    </FrameLayout>
+
+
+
+
+</LinearLayout>
