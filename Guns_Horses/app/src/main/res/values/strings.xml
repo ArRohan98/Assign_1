@@ -4,4 +4,7 @@
     <string name="ak47">Ak47</string>
     <string name="sniper">Sniper</string>
     <string name="pistol">Pistol</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

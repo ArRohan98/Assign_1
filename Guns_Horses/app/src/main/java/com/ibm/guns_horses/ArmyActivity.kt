@@ -11,7 +11,6 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import java.util.*
 
-
 class ArmyActivity : Activity() {
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +41,8 @@ class ArmyActivity : Activity() {
 
 
             listView.onItemClickListener = OnItemClickListener { parent, view, position, id ->
-
+                Log.d("ID","$position")
+                if(id == 1 ){
                 val i = Intent(this, ArmyGuns::class.java)
                 startActivityForResult(i, 1)
 
@@ -51,13 +51,16 @@ class ArmyActivity : Activity() {
 
     }
 
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == 1) {
 
-            val extras = data?.extras
-            val value = extras?.getString("gun1")
+            //val extras = data?.extras
+            val value = data?.getStringArrayListExtra("gun1").toString()
+
+
             Log.d("gun1", "$value")
         }
     }
